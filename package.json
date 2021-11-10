@@ -1,12 +1,26 @@
 {
   "name": "projeto_15_driveestore_back",
+  "type": "module",
   "version": "1.0.0",
-  "description": "",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [],
   "author": "",
-  "license": "ISC"
+  "license": "ISC",
+  "dependencies": {
+    "cors": "^2.8.5",
+    "express": "^4.17.1"
+  },
+  "devDependencies": {},
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/LeoDias-0/drivee-store-back.git"
+  },
+  "bugs": {
+    "url": "https://github.com/LeoDias-0/drivee-store-back/issues"
+  },
+  "homepage": "https://github.com/LeoDias-0/drivee-store-back#readme",
+  "description": ""
 }
