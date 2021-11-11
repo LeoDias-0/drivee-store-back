@@ -1,7 +1,7 @@
-import app from '../app'
+import app from '../src/app.js'
 import supertest from 'supertest';
 import generateFakeItem from './factories/itemFactory'
-import connection from '../database.js'
+import connection from '../src/database/database.js'
 
 describe("GET /items", ()=>{
     let items;
