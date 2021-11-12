@@ -1,13 +1,17 @@
-import cors from 'cors'
-import express from 'express'
+import express from "express";
+import cors from "cors";
+import getItems from "./controllers/getItems.js";
+import getItem from "./controllers/getItem.js";
 import signUp from './controllers/signUp.js'
 
+const app = express();
+app.use(express.json());
+app.use(cors());
 
-const app = express()
+app.get('/items', getItems);
+app.get('/item/:id', getItem);
+app.post('/sign-up', signUp);
 
-app.use(cors())
-app.use(express.json())
 
-app.post('/sign-up', signUp)
+export default app;
 
-export default app
