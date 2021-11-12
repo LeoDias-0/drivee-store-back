@@ -1,4 +1,4 @@
-import connection from "../database.js";
+import connection from '../database/database.js'
 
 export default async function getItems(req, res){
     try{
