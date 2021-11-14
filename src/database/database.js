@@ -3,21 +3,13 @@ import pg from 'pg'
 
 const { Pool } = pg
 
-const {
-  DB_USER,
-  DB_PASS,
-  DB_PORT,
-  DB_HOST,
-  DB_NAME
-} = process.env
+const databaseConfig = {
+  connectionString: process.env.DATABASE_URL,
+  ssl: {
+      rejectUnauthorized: false
+  }
+}
 
-const connection = new Pool ({
-  user: DB_USER,
-  password: DB_PASS,
-  port: DB_PORT,
-  host: DB_HOST,
-  database: DB_NAME
-})
-
+const connection = new Pool(databaseConfig)
 
 export default connection
