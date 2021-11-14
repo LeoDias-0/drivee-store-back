@@ -4,7 +4,8 @@ import supertest from 'supertest'
 import connection from '../src/database/database.js'
 
 beforeEach(async () => {
-    await connection.query(`DELETE FROM users;`);
+    await connection.query(`DELETE FROM sessions;`)
+    await connection.query(`DELETE FROM users;`)
 })
 
 afterAll(() => {
