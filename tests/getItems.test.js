@@ -1,3 +1,4 @@
+import '../src/setup.js'
 import app from '../src/app.js'
 import supertest from 'supertest';
 import generateFakeItem from './factories/itemFactory'
@@ -27,7 +28,6 @@ describe("GET /items", ()=>{
             price: expect.any(Number),
             img: expect.any(String)
         }]
-        console.log(result)
         expect(result.body).toMatchObject(desiredResult);
     })
 })
